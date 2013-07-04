@@ -1,0 +1,30 @@
+Hi/2 Doctor64,
+
+First thanks for making this available...
+
+I've run TVTest.exe and this is the result...
+
+
+31 Ã ‘ 2003 15:05:59 Looking for device
+31 Ã ‘ 2003 15:05:59 Found chip bt878
+31 Ã ‘ 2003 15:05:59 Looking for command memory address
+31 Ã ‘ 2003 15:05:59 INFO: Physical address is e4000000
+31 Ã ‘ 2003 15:05:59 INFO: PCI bus latency is 32.
+31 Ã ‘ 2003 15:05:59 INFO: found tv chip 878
+31 Ã ‘ 2003 15:05:59 INFO: vendor ID 109e
+31 Ã ‘ 2003 15:05:59 INFO: device ID 036e
+31 Ã ‘ 2003 15:05:59 INFO: sybsystem ID 0000
+31 Ã ‘ 2003 15:05:59 INFO: sybsystem vendor ID 0000
+31 Ã ‘ 2003 15:05:59 INFO: latency 32
+31 Ã ‘ 2003 15:05:59 INFO: IRQ Line B
+31 Ã ‘ 2003 15:05:59 DEBUG: i2c test
+31 Ã ‘ 2003 15:06:02 DEBUG: addr c2, value eb
+31 Ã ‘ 2003 15:06:02 INFO: Look's like found TUNER at i2c addr c2
+
+
+I've a LifeTec LT9415 tv/radio-card
+
+
+With kind regards,
+
+

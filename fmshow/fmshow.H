@@ -1,0 +1,3 @@
+#define DID_STLOAD 258
+#define DID_STSAVE 259
+#define DID_STEDIT 261

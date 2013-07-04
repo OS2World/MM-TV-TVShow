@@ -1,0 +1,34 @@
+for install add to config.sys device=x:\PATH\warpdrvr.sys
+Author can be contacted via e-mail (doctor@atm-lan.com.ua) or via forums at
+http://os2.kiev.ua or via irc. channel #os2russian on EFNet, nick doctor64, doctor128
+
+Completely rewritten alpha, many functions currently not work, requeres WarpOverlay
+
+Keys in tvshow.exe
+b-ShiftB Brightness -/+
+c/ShiftC Contrast -/+
+h/ShiftH Color Saturation -/+
+f - FullScreen
+UpArrow - Next Channel
+DownArrow - Previsious Channel
+pipe command interface - see file pipe.txt
+
+video.cfg
+section  [Video]
+connector - default input, 0-3
+colorsystem Color system,  0-7, 0 - autodetect(autodetect currently not worked)
+iscolor - yes/no, Color/BW mode
+blitter - blitter mode 0 - use R565, 1 - use Y422, support for HWenDIVE
+
+section [card] Card settings
+cardcode - card type, see comments in file
+tunercode - tuner type, if 0 - tuner defined in card definitio,
+else tuner code (see comments in file)
+
+sections [usercard] and [usertuner]
+For expirienced users only
+here you can try to change tvshow to support unsupported tuner.
+As example, i give definition of AverMedia TvPhone98 card and Philips FM1246 tuner
+If you need help, feel free to contact me
+
+

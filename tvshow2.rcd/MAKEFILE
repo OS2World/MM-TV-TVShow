@@ -1,0 +1,31 @@
+# Make file assumptions:
+#    - current directory will be used to store:
+#       object, executable, and resource files
+
+ERASE=ERASE
+GCPPC=ICC.EXE
+GLINK=ICC.EXE
+PROJECTDIR=d:\projects
+
+ICLCPPOPTS=/Ti+ /DE /GM /GD+ /DIC_TRACE_ALL /DIC_DEVELOP
+LOCALOPTS=/I$(PROJECTDIR)\tvshow2\tvshow2.lib;$(PROJECTDIR)\warpdriver;$(PROJECTDIR)\tvshow2\gd;
+
+GCPPFLAGS=$(LOCALOPTS) $(ICLCPPOPTS)
+
+GCPPLFLAGS=/B" /DE /pmtype:pm /ST:128000 /MAP"
+OBJS=tvshowrcd.obj
+
+all:  tvshowrcd.EXE
+
+.cpp.obj:
+        $(GCPPC) /C $(GCPPFLAGS) $*.CPP
+
+
+tvshowrcd.EXE:  $(OBJS) $(PROJECTDIR)\tvshow2\tvshow2.lib\tvshow2.lib 
+        $(GLINK) $(GCPPLFLAGS) /Fe"tvshowrcd.EXE" \
+          $(OBJS) $(PROJECTDIR)\tvshow2\tvshow2.lib\tvshow2.lib
+
+clean:
+        $(ERASE) tvshow2.EXE
+        $(ERASE) $(OBJS)
+        $(ERASE) tvshow2.RES

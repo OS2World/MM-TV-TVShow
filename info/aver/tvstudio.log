@@ -1,0 +1,19 @@
+OK,
+28 ꌁ 2003 10:27:49  Looking for device
+ 28 ꌁ 2003 10:27:49  Found chip bt878
+ 28 ꌁ 2003 10:27:49  Looking for command memory address
+ 28 ꌁ 2003 10:27:49  INFO: Physical address is ee000000
+ 28 ꌁ 2003 10:27:49  INFO: PCI bus latency is 32.
+ 28 ꌁ 2003 10:27:49  INFO: found tv chip 878 
+ 28 ꌁ 2003 10:27:49  INFO: vendor ID 109e 
+ 28 ꌁ 2003 10:27:49  INFO: device ID 036e 
+ 28 ꌁ 2003 10:27:49  INFO: sybsystem ID 0003 
+ 28 ꌁ 2003 10:27:49  INFO: sybsystem vendor ID 1461 
+ 28 ꌁ 2003 10:27:49  INFO: latency 32 
+ 28 ꌁ 2003 10:27:49  INFO: IRQ Line 5 
+ 28 ꌁ 2003 10:27:49  DEBUG: i2c test 
+ 28 ꌁ 2003 10:27:51  DEBUG: addr a0, value ff 
+ 28 ꌁ 2003 10:27:51  INFO: Look's like found PFC8582 EEPROM chip at i2c
+addr a0
+ 28 ꌁ 2003 10:27:52  DEBUG: addr c2, value 6c 
+ 28 ꌁ 2003 10:27:52  INFO: Look's like found TUNER at i2c addr c2

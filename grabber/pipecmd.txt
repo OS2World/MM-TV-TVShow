@@ -1,0 +1,28 @@
+accept pipe commands in pipe \pipe\tvshow: 
+QUIT
+reply OK
+INPUT <inputnum> 0-3
+reply OK|ERROR
+SYSTEM <colorsystem code> 1-7
+reply OK|ERROR
+BRIGHTNESS <brightness> 0-100
+reply OK|ERROR
+CONTRAST <contrast> 0-100
+reply OK|ERROR
+SATURATION <saturation> 0-100
+reply OK|ERROR
+STATUS
+reply STATUS: bright,contrast,saturation,input,videopresent,videostable 
+(video parameters 0 - FALSE, 1 TRUE)
+SAVE <filename> <additional text>
+reply OK|ERROR <error code>
+errorcode - сумма кодов
+1 - video not present (нет видеосигнала)
+2 - video not stable (нет синхронизации с видеосигналом)
+4 - i/o error (ошибка ввода вывода)
+8 - black frame (черный кадр)
+
+all values numeric, equvalent values in video.cfg
+example:
+echo CHANNEL 5 >\pipe\tvshow
+

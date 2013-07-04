@@ -1,0 +1,22 @@
+вот лог
+Looking for device
+Found chip bt878
+Looking for command memory address
+INFO: Physical address is da000000
+INFO: PCI bus latency is 32.
+INFO: found tv chip 878
+INFO: vendor ID 109e
+INFO: device ID 036e
+INFO: sybsystem ID 1852
+INFO: sybsystem vendor ID 1852
+INFO: latency 32
+INFO: IRQ Line A
+DEBUG: i2c test
+DEBUG: addr a0, value ff
+DEBUG: addr c2, value 6c
+---
+карта FlyVideo98FM
+с ней есть некоторые нюансы в работе старого TVShow
+звук начинает работать только после того, как включу и выключчу 
+CoolFM... T&VHP работает с ней стабильно.
+

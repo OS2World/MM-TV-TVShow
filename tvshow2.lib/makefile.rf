@@ -1,0 +1,16 @@
+ -+.\tvfuncs.obj &
+ -+.\tvaudio.obj &
+ -+.\videocfg.obj &
+ -+.\btfuncs.obj &
+ -+.\bti2c.obj &
+ -+.\bti2cs.obj &
+ -+.\bttuner.obj &
+ -+.\cfgfile.obj &
+ -+.\driver.obj &
+ -+.\fmfuncs.obj &
+ -+.\logger.obj &
+ -+.\maindata.obj &
+ -+.\memory.obj &
+ -+.\mspfunc.obj &
+ -+.\pcifuncs.obj &
+ -+.\phcard.obj;

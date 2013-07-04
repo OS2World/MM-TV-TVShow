@@ -1,0 +1,35 @@
+ 23 ”¥¢ 2003 10:29:42  Looking for device
+ 23 ”¥¢ 2003 10:29:42  Found chip bt878
+ 23 ”¥¢ 2003 10:29:42  Looking for command memory address
+ 23 ”¥¢ 2003 10:29:42  INFO: Physical address is 40a00000
+ 23 ”¥¢ 2003 10:29:42  INFO: PCI bus latency is 66.
+ 23 ”¥¢ 2003 10:29:42  INFO: found tv chip 878 
+ 23 ”¥¢ 2003 10:29:42  INFO: vendor ID 109e 
+ 23 ”¥¢ 2003 10:29:42  INFO: device ID 036e 
+ 23 ”¥¢ 2003 10:29:42  INFO: sybsystem ID 1852 
+ 23 ”¥¢ 2003 10:29:42  INFO: sybsystem vendor ID 1852 
+ 23 ”¥¢ 2003 10:29:42  INFO: latency 66 
+ 23 ”¥¢ 2003 10:29:42  INFO: IRQ Line B 
+ 23 ”¥¢ 2003 10:29:42  DEBUG: MSP34XX reset on pin 5 
+ 23 ”¥¢ 2003 10:29:42  DEBUG: i2c test 
+ 23 ”¥¢ 2003 10:29:45  DEBUG: addr a0, value ff 
+ 23 ”¥¢ 2003 10:29:45  INFO: Look's like found PFC8582 EEPROM chip at i2c addr a0 
+ 23 ”¥¢ 2003 10:29:45  DEBUG: EEProm dump
+ 23 ”¥¢ 2003 10:29:46  DEBUG: 000: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:46  DEBUG: 010: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:47  DEBUG: 020: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:47  DEBUG: 030: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:48  DEBUG: 040: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:48  DEBUG: 050: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:49  DEBUG: 060: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:49  DEBUG: 070: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:50  DEBUG: 080: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:50  DEBUG: 090: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:51  DEBUG: 0a0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:51  DEBUG: 0b0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:52  DEBUG: 0c0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:52  DEBUG: 0d0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:53  DEBUG: 0e0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+ 23 ”¥¢ 2003 10:29:53  DEBUG: 0f0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ 23 ”¥¢ 2003 10:29:54  DEBUG: addr c2, value 6c 
+ 23 ”¥¢ 2003 10:29:54  INFO: Look's like found TUNER at i2c addr c2 

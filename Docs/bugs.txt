@@ -1,0 +1,23 @@
+List of known bugs:
+
+ SS> еще мелочь - при первом старте и показе картинки канала
+ SS> яркость-контрастность -цветность и систему цвета берет не с
+ SS> чаннел.дат, а с конфига дефолт если просто канал вперед-назад
+ SS> переключить - уже все ок, с чаненел дат дает
+Mon  03/05/2004 fixed
+
+Trap on run without warpoverlay.
+
+On some configurations (video GF4MX440?) on first start after reboot
+WarpOverlay not inited correctly. No errors in tvshow, but grey screen. Just
+restart.
+
+No deinterlacing in frame grab
+
+Remote control daemon work only with AverMedia-style remote control.
+Hauppauge not supported jet.
+
+Missing help text on lots of menu items
+
+
+

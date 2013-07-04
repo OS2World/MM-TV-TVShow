@@ -1,0 +1,353 @@
+
+/* OS/2 Warp Resource Script File - Created by Integrated Resource Editor */
+
+#define INCL_WINSYS
+#define INCL_WINBIDI
+#define INCL_WINSTDDLGS
+#define INCL_WINSTDSPIN
+#define INCL_NLS
+#define INCL_SW
+
+#include <os2.h>
+
+#include "d:\projects\tvshow2\tvshow2.gui\tvshow2.h"
+
+ICON        WND_MAIN "tvshow2.ico"
+MENU WND_MAIN
+BEGIN
+
+    SUBMENU "~Test",                   IDM_TEST, MIS_TEXT
+    BEGIN
+        MENUITEM "~HWVideo test",      IDM_HWVIDEOTEST, MIS_TEXT
+        MENUITEM "~MSP State",         IDM_MSPSTATE, MIS_TEXT
+        MENUITEM "~Color bars",        IDM_COLORBARS, MIS_TEXT
+    END
+
+    SUBMENU "~Channels",               IDM_CHANNELS, MIS_TEXT
+    BEGIN
+        MENUITEM "~Next channel",      IDM_NEXTCHANNEL, MIS_TEXT
+        MENUITEM "~Previsious channel", IDM_PREVISIOUSCHANNEL, MIS_TEXT
+        MENUITEM "~Load channel list", IDM_LOADCHANNELLIST, MIS_TEXT
+        MENUITEM "~Save channel list", IDM_SAVECHANNELLIST, MIS_TEXT
+        MENUITEM "S~can channels",     IDM_SCANCHANNELS, MIS_TEXT
+    END
+
+    SUBMENU "~Video",                  IDM_VIDEO, MIS_TEXT
+    BEGIN
+
+        SUBMENU "~Brightness",         IDM_BRIGHTNESS, MIS_TEXT
+        BEGIN
+            MENUITEM "~Increase",      IDC_INCBRIGHT, MIS_TEXT
+            MENUITEM "~Decrease",      IDC_DECBRIGHT, MIS_TEXT
+        END
+
+        SUBMENU "~Contrast",           IDM_CONTRAST, MIS_TEXT
+        BEGIN
+            MENUITEM "~Increase",      IDC_INCCONTRAST, MIS_TEXT
+            MENUITEM "~Decrease",      IDC_DECCONTRAST, MIS_TEXT
+        END
+
+        SUBMENU "~Saturation",         IDM_SATURATION, MIS_TEXT
+        BEGIN
+            MENUITEM "~Increase",      IDC_INCSATURATION, MIS_TEXT
+            MENUITEM "~Decrease",      IDC_DECSATURATION, MIS_TEXT
+        END
+
+        SUBMENU "~Input",              IDM_INPUT, MIS_TEXT
+        BEGIN
+            MENUITEM "~Tuner",         IDC_TUNER, MIS_TEXT
+            MENUITEM "~Line-In",       IDC_LINEIN, MIS_TEXT
+            MENUITEM "~SVHS",          IDC_SVHS, MIS_TEXT
+            MENUITEM "~Ext",           IDC_EXT, MIS_TEXT
+        END
+        MENUITEM "Se~ttings",          IDM_SETTINGS, MIS_TEXT
+        MENUITEM "~Fullscreen",        IDM_FULLSCREEN, MIS_TEXT
+    END
+
+    SUBMENU "~Deinterlace",            IDM_DEINTERLACE, MIS_TEXT
+    BEGIN
+        MENUITEM "O~ff",               IDM_DEINTOFF, MIS_TEXT
+        MENUITEM "~Bob",               IDM_DEINTBOB, MIS_TEXT
+        MENUITEM "~Weave",             IDM_DEINTWEAVE, MIS_TEXT
+    END
+
+    SUBMENU "~Record",                 IDM_RECORD, MIS_TEXT
+    BEGIN
+        MENUITEM "~Stream",            IDM_RECSTREAM, MIS_TEXT
+        MENUITEM "~Frame",             IDM_RECFRAME, MIS_TEXT
+        MENUITEM "~Options",           IDM_RECOPTIONS, MIS_TEXT
+    END
+
+    SUBMENU "~Audio",                  IDM_AUDIO, MIS_TEXT
+    BEGIN
+
+        SUBMENU "~Volume",             IDM_VOLUME, MIS_TEXT
+        BEGIN
+            MENUITEM "~Increase",      IDC_INCVOLUME, MIS_TEXT
+            MENUITEM "~Decrease",      IDM_DECVOLUME, MIS_TEXT
+        END
+        MENUITEM "Audio input ~0",     IDM_AUDIOINPUT0, MIS_TEXT
+        MENUITEM "Audio input ~1",     IDM_AUDIOINPUT1, MIS_TEXT
+        MENUITEM "Audio input ~2",     IDM_AUDIOINPUT2, MIS_TEXT
+        MENUITEM "Audio input ~3",     IDM_AUDIOINPUT3, MIS_TEXT
+        MENUITEM "Se~tting",           IDM_AUDIOSETTING, MIS_TEXT
+
+        SUBMENU "~Sound mode",         IDM_SOUNDMODE, MIS_TEXT
+        BEGIN
+            MENUITEM "~B/G-NICAM",     IDM_BGNICAM, MIS_TEXT
+            MENUITEM "~D/K-NICAM",     IDM_DKNICAM, MIS_TEXT
+            MENUITEM "~L-NICAM",       IDM_LNICAM, MIS_TEXT
+            MENUITEM "~I-NICAM",       IDM_INICAM, MIS_TEXT
+            MENUITEM SEPARATOR
+            MENUITEM "~M-FM",          IDM_MFM, MIS_TEXT
+            MENUITEM "B/G-~FM",        IDM_BGFM, MIS_TEXT
+            MENUITEM "D/K~1-FM",       IDM_DK1FM, MIS_TEXT
+        END
+    END
+
+    SUBMENU "~Help",                   IDM_HELP, MIS_TEXT
+    BEGIN
+    END
+END
+
+ACCELTABLE WND_MAIN PRELOAD
+BEGIN
+    VK_UP,      IDM_NEXTCHANNEL, VIRTUALKEY
+    VK_DOWN,    IDM_PREVISIOUSCHANNEL, VIRTUALKEY
+    "b",        IDC_DECBRIGHT, CHAR
+    "B",        IDC_INCBRIGHT, CHAR, SHIFT
+    "c",        IDC_DECCONTRAST, CHAR
+    "C",        IDC_INCCONTRAST, CHAR, SHIFT
+    "s",        IDC_DECSATURATION, CHAR
+    "S",        IDC_INCSATURATION, CHAR, SHIFT
+    "f",        IDM_FULLSCREEN, CHAR
+END
+
+WINDOWTEMPLATE WND_MAIN 850
+BEGIN
+    WINDOW "TVShow", WND_MAIN, 4, 66, 458, 225, WC_FRAME, FS_NOBYTEALIGN |
+                FS_SIZEBORDER | WS_CLIPSIBLINGS | WS_SAVEBITS | WS_VISIBLE,
+                FCF_TITLEBAR | FCF_SYSMENU | FCF_MENU | FCF_ACCELTABLE
+    BEGIN
+        CONTROL "Text",                ST_OSDPROGRAM, 357, 200, 45, 8,
+                                            WC_STATIC, SS_TEXT | DT_LEFT |
+                                            DT_TOP | WS_GROUP | WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE DLG_VIDEOCONTROL 850
+BEGIN
+    DIALOG "Video Control", DLG_VIDEOCONTROL, 14, 38, 378, 202, FS_NOBYTEALIGN |
+                FS_DLGBORDER | WS_CLIPSIBLINGS | WS_SAVEBITS | WS_VISIBLE,
+                FCF_TITLEBAR | FCF_SYSMENU
+    BEGIN
+        CONTROL "OK",                  DID_OK, 5, 5, 38, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | BS_DEFAULT |
+                                            WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        CONTROL "Cancel",              DID_CANCEL, 48, 5, 38, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "Help",                6035, 91, 5, 38, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | BS_HELP |
+                                            BS_NOPOINTERFOCUS | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "Brightness",          6038, 53, 154, 61, 8, WC_STATIC, SS_TEXT |
+                                            DT_CENTER | DT_VCENTER | WS_GROUP |
+                                            WS_VISIBLE
+        CONTROL "",                    SL_BRIGHTNESS, 7, 129, 147, 20,
+                                            WC_SLIDER, SLS_HORIZONTAL | SLS_TOP |
+                                            SLS_BUTTONSRIGHT | SLS_HOMELEFT |
+                                            SLS_PRIMARYSCALE2 | WS_TABSTOP |
+                                            WS_VISIBLE
+                CTLDATA 12, 0, 20, 100, 5, 50
+        CONTROL "Contrast",            6039, 61, 116, 41, 8, WC_STATIC, SS_TEXT |
+                                            DT_CENTER | DT_VCENTER | WS_GROUP |
+                                            WS_VISIBLE
+        CONTROL "",                    SL_CONTRAST, 7, 91, 147, 20, WC_SLIDER,
+                                            SLS_HORIZONTAL | SLS_TOP |
+                                            SLS_BUTTONSRIGHT | SLS_HOMELEFT |
+                                            SLS_PRIMARYSCALE2 | WS_TABSTOP |
+                                            WS_VISIBLE
+                CTLDATA 12, 0, 5, 5, 5, 50
+        CONTROL "Saturation",          6040, 34, 78, 100, 8, WC_STATIC, SS_TEXT |
+                                            DT_CENTER | DT_VCENTER | WS_GROUP |
+                                            WS_VISIBLE
+        CONTROL "",                    SL_SATURATION, 8, 53, 147, 20, WC_SLIDER,
+                                            SLS_HORIZONTAL | SLS_TOP |
+                                            SLS_BUTTONSRIGHT | SLS_HOMELEFT |
+                                            SLS_PRIMARYSCALE2 | WS_TABSTOP |
+                                            WS_VISIBLE
+                CTLDATA 12, 0, 5, 5, 5, 50
+        CONTROL "Volume",              6045, 30, 43, 100, 8, WC_STATIC, SS_TEXT |
+                                            DT_CENTER | DT_VCENTER | WS_GROUP |
+                                            WS_VISIBLE
+        CONTROL "",                    SL_VOLUME, 8, 20, 147, 20, WC_SLIDER,
+                                            SLS_HORIZONTAL | SLS_TOP |
+                                            SLS_BUTTONSRIGHT | SLS_HOMELEFT |
+                                            SLS_PRIMARYSCALE2 | WS_TABSTOP |
+                                            WS_VISIBLE
+                CTLDATA 12, 0, 5, 5, 5, 50
+        CONTROL "Color system",        6048, 162, 35, 109, 114, WC_STATIC,
+                                            SS_GROUPBOX | WS_GROUP | WS_VISIBLE
+        CONTROL "~NTSC-M",             RB_NTSC_M, 167, 129, 99, 10, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "NTSC-~Japan",         RB_NTSCJAPAN, 167, 114, 99, 10,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "~PAL",                RB_PAL, 167, 102, 99, 10, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "P~AL-M",              RB_PALM, 168, 89, 99, 10, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "PA~L-N",              RB_PALN, 168, 74, 99, 10, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "~SECAM",              RB_SECAM, 168, 60, 99, 10, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "PAL-N ~Combination",  RB_PALNCOMBINATION, 170, 44, 99, 10,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "Channel name",        6056, 42, 187, 61, 8, WC_STATIC, SS_TEXT |
+                                            DT_LEFT | DT_TOP | WS_GROUP |
+                                            WS_VISIBLE
+        CONTROL "Channel name",        EF_CHANNELNAME, 13, 168, 297, 10,
+                                            WC_ENTRYFIELD, ES_AUTOSCROLL |
+                                            ES_MARGIN | ES_ANY | WS_TABSTOP |
+                                            WS_VISIBLE
+                CTLDATA 8, 80, 0, 0
+        CONTROL "Frequency",           EF_FREQUENCY, 288, 122, 66, 10,
+                                            WC_ENTRYFIELD, ES_MARGIN |
+                                            ES_READONLY | ES_ANY | WS_TABSTOP |
+                                            WS_VISIBLE
+                CTLDATA 8, 32, 0, 0
+        CONTROL "Frequency",           ST_FREQUENCY, 287, 144, 53, 8, WC_STATIC,
+                                            SS_TEXT | DT_LEFT | DT_TOP |
+                                            WS_GROUP | WS_VISIBLE
+        CONTROL "Fine tune",           32793, 287, 93, 55, 24, WC_STATIC,
+                                            SS_GROUPBOX | WS_GROUP | WS_VISIBLE
+        CONTROL "~[",                  PB_FREQDEC, 291, 97, 12, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | WS_GROUP |
+                                            WS_TABSTOP | WS_VISIBLE
+                PRESPARAMS PP_FONTNAMESIZE, "9.WarpSans"
+        CONTROL "~]",                  PB_FREQINC, 326, 97, 12, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | WS_GROUP |
+                                            WS_TABSTOP | WS_VISIBLE
+                PRESPARAMS PP_FONTNAMESIZE, "9.WarpSans"
+    END
+END
+
+DLGTEMPLATE DLG_SCANNING 850 MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG "Scanning", DLG_SCANNING, 40, 85, 219, 143, FS_NOBYTEALIGN |
+                FS_DLGBORDER | WS_CLIPSIBLINGS | WS_SAVEBITS | WS_VISIBLE,
+                FCF_TITLEBAR
+    BEGIN
+        CONTROL "OK",                  DID_OK, 176, 72, 38, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | BS_DEFAULT |
+                                            WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        CONTROL "Cancel",              DID_CANCEL, 177, 57, 38, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "Help",                32778, 177, 41, 38, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | BS_HELP |
+                                            BS_NOPOINTERFOCUS | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "~Scan!",              PB_SCAN, 178, 117, 38, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "Channels found:",     32781, 8, 54, 68, 8, WC_STATIC, SS_TEXT |
+                                            DT_LEFT | DT_TOP | WS_GROUP |
+                                            WS_VISIBLE
+        CONTROL "Text",                EF_CHANNELS, 83, 53, 41, 10,
+                                            WC_ENTRYFIELD, ES_MARGIN |
+                                            ES_READONLY | ES_ANY | WS_VISIBLE
+                CTLDATA 8, 32, 0, 0
+        CONTROL "",                    PI_SCANNING, 7, 7, 208, 20, WC_SLIDER,
+                                            SLS_HORIZONTAL | SLS_TOP |
+                                            SLS_BUTTONSLEFT | SLS_HOMELEFT |
+                                            SLS_READONLY | SLS_PRIMARYSCALE2 |
+                                            WS_VISIBLE
+                CTLDATA 12, 0, 5, 5, 5, 50
+        CONTROL "Band",                32785, 44, 38, 20, 8, WC_STATIC, SS_TEXT |
+                                            DT_LEFT | DT_TOP | WS_GROUP |
+                                            WS_VISIBLE
+        CONTROL "Band",                EF_BAND, 83, 37, 41, 10, WC_ENTRYFIELD,
+                                            ES_MARGIN | ES_READONLY | ES_ANY |
+                                            WS_VISIBLE
+                CTLDATA 8, 32, 0, 0
+        CONTROL "Scan mode",           32787, 12, 92, 57, 42, WC_STATIC,
+                                            SS_GROUPBOX | WS_GROUP | WS_VISIBLE
+        CONTROL "~Slow",               RB_SLOW, 19, 112, 38, 10, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "~Fast",               RB_FAST, 20, 98, 38, 10, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "Region",              CX_REGION, 75, 73, 79, 32, WC_COMBOBOX,
+                                            CBS_DROPDOWNLIST | ES_ANY |
+                                            WS_GROUP | WS_DISABLED | WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE DLG_AUDIOCONTROL 850 MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG "Audio Control", DLG_AUDIOCONTROL, 36, 115, 200, 143, FS_NOBYTEALIGN |
+                FS_DLGBORDER | WS_CLIPSIBLINGS | WS_SAVEBITS | WS_VISIBLE,
+                FCF_TITLEBAR | FCF_SYSMENU
+    BEGIN
+        CONTROL "OK",                  DID_OK, 5, 5, 38, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | BS_DEFAULT |
+                                            WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        CONTROL "Cancel",              DID_CANCEL, 48, 5, 38, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "Help",                32812, 91, 5, 38, 12, WC_BUTTON,
+                                            BS_PUSHBUTTON | BS_HELP |
+                                            BS_NOPOINTERFOCUS | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "M-FM",                RB_SOUNDMFM, 17, 127, 38, 10, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "B/G-FM",              RB_SOUNDBGFM, 17, 116, 38, 10, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "D/K1-FM",             RB_SOUNDDK1FM, 17, 107, 45, 10,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "D/K2 FM",             RB_SOUNDDK2FM, 17, 94, 44, 10, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "B/G-NICAM",           RB_SOUNDBGNICAM, 18, 82, 57, 10,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "L-NICAM",             RB_SOUNDLNICAM, 17, 69, 51, 10,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "I-NICAM",             RB_SOUNDINICAM, 17, 59, 38, 10,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "D/K-NICAM",           RB_SOUNDDKNICAM, 17, 48, 38, 10,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_TABSTOP | WS_VISIBLE
+    END
+END
+
+CODEPAGE 850
+STRINGTABLE MOVEABLE DISCARDABLE
+BEGIN
+    STR_HELLO,                          "Hello, World!!!"
+    STR_NONE,                           " "
+    WND_MAIN,                           "TVShow/2 V0.9.7"
+    STR_INFO,                           "Use Alt-F4 to Close Window"
+    IDM_HELP,                           "Help menu"
+    IDM_KEYSHELP,                       "Keys help"
+    IDM_PRODUCTINFORMATION,             "Product information"
+    IDM_SAVECHANNELLIST,                "Save current channel list to file"
+    IDM_LOADCHANNELLIST,                "Load channel list from file"
+    IDM_NEXTCHANNEL,                    "Select next channel"
+    IDM_PREVISIOUSCHANNEL,              "Select previsious channel"
+    IDM_SETTINGS,                       "Current channel settings"
+END

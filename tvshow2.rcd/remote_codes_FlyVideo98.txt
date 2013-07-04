@@ -1,0 +1,43 @@
+
+Key codes from LifeView FlyVideo 98FM remote.
+Thanks to Lech Wiktor Piotrowski (lewhoo(at)teamos2.org.pl)
+
+
+KEY_NO	KEY_DESC	CODE
+1	Power		00
+2	Mouse mode	80
+3	TV/FullScreen	40
+4	Channel Up	48
+5	1 (NW Arrow)	C0
+6	2 (N Arrow)	20
+7	3 (NE Arrow)	A0
+8	Channel Down	C8
+9	4 (W Arrow)	E0
+10	5 (sqr, NWES)	10
+11	6 (E Arrow)	90
+12	Vol Up		28
+13	7 (SW Arrow)	D0
+14	8 (S Arrow)	30
+15	9 (SE Arrow)	B0
+16	Vol down	E8
+17	Cancel/LCLK	F8
+18	0		F0
+19	Enter/RCLK	08
+20	Recall		60
+21	Air/CATV/UpAr	70
+22	Video		88
+23	Inc		50
+24	LeftArrow	48
+25	Blank key	C8
+26	Audio/RightAr	A8
+27	Dec.		68
+29	2 squares...	B8
+30	DownArrow	98
+31	MTS/Esc		58
+32	->|		38
+33	|<-		78
+34	Mute/Rctngle	D8
+35	AV Source/<-	18
+
+Release Key: 100
+

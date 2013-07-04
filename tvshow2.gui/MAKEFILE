@@ -1,0 +1,41 @@
+# Make file assumptions:
+#    - current directory will be used to store:
+#       object, executable, and resource files
+
+ERASE=ERASE
+GCPPC=ICC.EXE
+GLINK=ICC.EXE
+PROJECTDIR=d:\projects
+
+ICLCPPOPTS=/Ti+ /Sp1 /DE /GM /GD+ /DIC_TRACE_ALL /DIC_DEVELOP
+LOCALOPTS=/I$(PROJECTDIR)\tvshow2\tvshow2.lib;$(PROJECTDIR)\warpdriver;$(PROJECTDIR)\tvshow2\gd;
+
+GCPPFLAGS=$(LOCALOPTS) $(ICLCPPOPTS)
+
+GCPPLFLAGS=/B" /DE /pmtype:pm /ST:128000 /MAP"
+OBJS=tvshow2.obj woverlay.obj auwmhdr.obj atimehdr.obj TVViddlg.obj globals.obj tvscandlg.obj pipehndl.obj savejpeg.obj
+#TVAuddlg.obj
+#tmovehr.obj
+
+all:  tvshow2.EXE tvshow2.ICO
+
+.cpp.obj:
+        $(GCPPC) /C $(GCPPFLAGS) $*.CPP
+
+
+tvshow2.EXE:  $(OBJS) $(PROJECTDIR)\tvshow2\tvshow2.lib\tvshow2.lib tvshow2.RES
+        $(GLINK) $(GCPPLFLAGS) /Fe"tvshow2.EXE" \
+          $(OBJS) $(PROJECTDIR)\tvshow2\tvshow2.lib\tvshow2.lib $(PROJECTDIR)\tvshow2\gd\gdlib.lib
+        RC tvshow2.RES tvshow2.EXE
+
+tvshow2.obj:  tvshow2.CPP tvshow2.HPP tvshow2.H
+        $(GCPPC) /C $(GCPPFLAGS) tvshow2.CPP
+
+tvshow2.RES:  tvshow2.RC tvshow2.H
+        RC -DIC_PM  -r tvshow2.RC
+#-DINCL_NLS
+
+clean:
+        $(ERASE) tvshow2.EXE
+        $(ERASE) $(OBJS)
+        $(ERASE) tvshow2.RES

@@ -1,0 +1,7 @@
+CHANNEL <num> - switch to channel
+NEXTCHANNEL
+PREVCHANNEL - switch to next/prev channel
+INPUT <num> - select input
+BRIGHTNESS <num>
+CONTRAST <num> 
+SATURATION <num> - set brignthess/contrast/saturation, <num> in 0-100

@@ -1,0 +1,30 @@
+0.9.1 	i2c routines rewritten.
+	Scan for channels added. (only slow metod currently worked)
+	Simple deinterlacing algoritm implemented
+	Lots of bugfixes ;)
+0.9.2   skipped due error in version numbering
+0.9.3   added frequency fine-tune in channel setup
+	new sync metod implemented (wait for retrace in cycle)
+	lowered chance of losting frames
+0.9.4   Major rewriting of i2c code (god damn Brooktree!)
+	MSP3410/MSP3415 advanced sound decoder support
+(tested only D/K1 FM coding, NICAM stereo sound must be work, but not tested,
+warning - at startup decoder inited as D/K NICAM, don't forget to switch to 
+other)
+0.9.5	color bar test
+	fullscreen mode (activated by menu or 'f' key)
+	float popup menu (right click on video window)
+	fixed no NICAM sound (missed NICAM prescale) (Tested in D/K NICAM mode)
+0.9.6   bringed back pipe command interface
+	fixed updating of status line after pipe command
+	log filename and loglevel in video.cfg
+0.9.7   rewritten memory functions. No more 16 MB barrier. Requered new warpdriver.sys
+	removed maphymem.dll
+	due memory architecture changes, rewritten blitter
+	fixed incorrect scaling in pal/secam, removed garbage on last pixel in 
+scan line. 
+	initial deinterlace support, bob and weave algoritms
+	fixed monochrome mode support
+	single frame grab implemented
+	color frame grab fix
+	frame grab produced files with names ddhhmmss.jpg dd-day, hh-hour, mm-min, ss-sec

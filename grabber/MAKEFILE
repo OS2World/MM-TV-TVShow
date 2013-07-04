@@ -1,0 +1,44 @@
+# Make file assumptions:
+#    - Environment variable INCLUDE contains paths to:
+#       IBM Compiler target_directory\include;
+#       OS/2 Developer's Toolkit target_directory include paths
+#    - Environment variable LIB contains paths to:
+#       IBM Compiler target_directory\lib;
+#       OS/2 Developer's Toolkit target_directory lib paths
+#    - Current directory contains source files.  Originals are in:
+#       IBM Compiler target_directory\samples\ioc\hello2
+#    - current directory will be used to store:
+#       object, executable, and resource files
+
+ERASE=ERASE
+GCPPC=ICC.EXE
+GLINK=ICC.EXE
+
+ICLCPPOPTS=/Ti+ /DE /GM /GD- /DIC_TRACE_ALL /DIC_DEVELOP /Wuse+
+LOCALOPTS=/Id:\projects\tvshow2\tvshow2.lib;.\gd;\projects\warpdriver
+
+GCPPFLAGS=$(LOCALOPTS) $(ICLCPPOPTS)
+
+GCPPLFLAGS=/B" /DE /pmtype:vio /ST:128000 /MAP"
+OBJS=grabber.obj globals.obj pipehndl.obj savejpeg.obj
+# woverlay.obj auwmhdr.obj atimehdr.obj TVViddlg.obj globals.obj tvscandlg.obj pipehndl.obj
+#tmovehr.obj
+
+all:  grabber.EXE
+
+.cpp.obj:
+        $(GCPPC) /C $(GCPPFLAGS) $*.CPP
+
+
+grabber.EXE:  $(OBJS) \projects\tvshow2\tvshow2.lib\tvshow2.lib
+        $(GLINK) $(GCPPLFLAGS) /Fe"grabber.EXE" \
+          $(OBJS) \projects\tvshow2\tvshow2.lib\tvshow2.lib .\gd\gdlib.lib
+
+grabber.obj:  grabber.cpp
+        $(GCPPC) /C $(GCPPFLAGS) grabber.CPP
+
+
+clean:
+        $(ERASE) grabber.EXE
+        $(ERASE) $(OBJS)
+

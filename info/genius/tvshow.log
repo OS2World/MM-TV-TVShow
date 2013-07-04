@@ -1,0 +1,42 @@
+ 23 ”¥¢ 2003 11:01:07  DEBUG: Size Handler called 
+ 23 ”¥¢ 2003 11:01:07  DEBUG: width 988 ,height  601
+ 23 ”¥¢ 2003 11:01:07  Looking for device
+ 23 ”¥¢ 2003 11:01:07  Found chip bt878
+ 23 ”¥¢ 2003 11:01:07  Looking for command memory address
+ 23 ”¥¢ 2003 11:01:07  INFO: Physical address is 40a00000
+ 23 ”¥¢ 2003 11:01:07  INFO: PCI bus latency is 66.
+ 23 ”¥¢ 2003 11:01:07  INFO: found tv chip 878 
+ 23 ”¥¢ 2003 11:01:07  INFO: vendor ID 109e 
+ 23 ”¥¢ 2003 11:01:07  INFO: device ID 036e 
+ 23 ”¥¢ 2003 11:01:07  INFO: sybsystem ID 1852 
+ 23 ”¥¢ 2003 11:01:07  INFO: sybsystem vendor ID 1852 
+ 23 ”¥¢ 2003 11:01:07  INFO: latency 66 
+ 23 ”¥¢ 2003 11:01:07  INFO: IRQ Line B 
+ 23 ”¥¢ 2003 11:01:07  DEBUG: buffer mapped to 5c0000
+ 23 ”¥¢ 2003 11:01:08  DEBUG: MSP34XX reset on pin 5 
+ 23 ”¥¢ 2003 11:01:08  DEBUG: Bufs: phys - 0055d000, virt - 005c0000, vlinelen= 00000600
+ 23 ”¥¢ 2003 11:01:08  INFO: Program start at 0063d000
+ 23 ”¥¢ 2003 11:01:08  INFO: Program len 00001228
+ 23 ”¥¢ 2003 11:01:08  DEBUG: prstart 0063d000
+ 23 ”¥¢ 2003 11:01:08  DEBUG: Size Handler called 
+ 23 ”¥¢ 2003 11:01:08  DEBUG: width 768 ,height  576
+ 23 ”¥¢ 2003 11:01:08  INFO: Reading TV channels list 
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 1 1 174000000 6 50 50 40 55 HBO-teszt
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 2 2 206000000 6 50 50 40 55 RTL-K
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 3 3 214000000 6 50 50 40 55 TV@2
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 4 4 183250000 6 50 50 40 55 New channel 4
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 5 5 199250000 6 50 50 40 55 New channel 5
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 6 6 503250000 6 50 50 40 55 New channel 6
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 7 7 543250000 6 50 50 40 55 New channel 7
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 8 8 559250000 6 50 50 40 55 New channel 8
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 9 9 583250000 6 50 50 40 55 New channel 9
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 10 10 599250000 6 50 50 40 55 New channel 10
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 11 11 623250000 6 50 50 40 55 New channel 11
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 12 12 687250000 6 50 50 40 55 New channel 12
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 13 13 703312500 6 50 50 40 55 New channel 13
+ 23 ”¥¢ 2003 11:01:08  DEBUG: num: 14 14 719312500 6 50 50 40 55 New channel 14
+ 23 ”¥¢ 2003 11:01:08  DEBUG: total channel 14 
+ 23 ”¥¢ 2003 11:01:08  DEBUG: select tv channel 1 freq 174000000, bright 50, contr 50, sat 40 name  
+ 23 ”¥¢ 2003 11:01:09  DEBUG: select tv channel 2 freq 206000000, bright 50, contr 50, sat 40 name  
+ 23 ”¥¢ 2003 11:01:12  DEBUG: Free Buffer Mapping 
+ 23 ”¥¢ 2003 11:01:12  DEBUG: free buffer at  55d000

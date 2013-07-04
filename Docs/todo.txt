@@ -1,0 +1,12 @@
+А, и в пайпконтроль fullscreen и mute ;)
+
+volume control
+
+region selection and fast scan in channel scan
+
+stream grabbing
+
+documentation
+
+OSD (On Screen Display) support
+

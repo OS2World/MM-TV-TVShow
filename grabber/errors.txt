@@ -1,0 +1,6 @@
+ERROR 1 - file i/o error
+ERROR 2 - video signal not present
+ERROR 3 - sync signal not present
+ERROR 9 - возможно, черный экран
+OK - все нормально
+в случае ошибки все равно делается попытка записать кадр.

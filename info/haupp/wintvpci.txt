@@ -1,0 +1,43 @@
+It's a Hauppauge WinTV PCI:
+
+Looking for device
+Found chip bt878
+Looking for command memory address
+INFO: Physical address is ddbff000
+INFO: PCI bus latency is 32.
+INFO: found tv chip 878 
+INFO: vendor ID 109e 
+INFO: device ID 036e 
+INFO: sybsystem ID 13eb 
+INFO: sybsystem vendor ID 0070 
+INFO: latency 32 
+INFO: IRQ Line 5 
+DEBUG: i2c test 
+DEBUG: addr 30, value 0 
+INFO: Look's like found Hauppage style remote (internal) at i2c addr 30 
+DEBUG: addr a0, value 0 
+INFO: Look's like found PFC8582 EEPROM chip at i2c addr a0 
+DEBUG: addr c2, value 7c 
+INFO: Look's like found TUNER at i2c addr c2 
+
+
+ 24 ? Ø 2003 20:26:35  Looking for device
+ 24 ? Ø 2003 20:26:35  Found chip bt878
+ 24 ? Ø 2003 20:26:35  Looking for command memory address
+ 24 ? Ø 2003 20:26:35  INFO: Physical address is ddbff000
+ 24 ? Ø 2003 20:26:35  INFO: PCI bus latency is 32.
+ 24 ? Ø 2003 20:26:35  INFO: found tv chip 878 
+ 24 ? Ø 2003 20:26:35  INFO: vendor ID 109e 
+ 24 ? Ø 2003 20:26:35  INFO: device ID 036e 
+ 24 ? Ø 2003 20:26:35  INFO: sybsystem ID 13eb 
+ 24 ? Ø 2003 20:26:35  INFO: sybsystem vendor ID 0070 
+ 24 ? Ø 2003 20:26:35  INFO: latency 32 
+ 24 ? Ø 2003 20:26:35  INFO: IRQ Line 5 
+ 24 ? Ø 2003 20:26:35  DEBUG: i2c test 
+ 24 ? Ø 2003 20:26:36  DEBUG: addr 30, value 0 
+ 24 ? Ø 2003 20:26:36  INFO: Look's like found Hauppage style remote (internal) at i2c addr 30 
+ 24 ? Ø 2003 20:26:38  DEBUG: addr a0, value 0 
+ 24 ? Ø 2003 20:26:38  INFO: Look's like found PFC8582 EEPROM chip at i2c addr a0 
+ 24 ? Ø 2003 20:26:38  DEBUG: addr c2, value 7c 
+ 24 ? Ø 2003 20:26:38  INFO: Look's like found TUNER at i2c addr c2 
+
